@@ -2,14 +2,15 @@
 version: 2.1
 
 #working_directory: ~/react-slingshot/
-steps:
-  - checkout
+#steps:
+
 
 jobs:
   build:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - checkout
       - run: npm run lint
   test:
     docker:
